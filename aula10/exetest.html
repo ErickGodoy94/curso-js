@@ -1,0 +1,58 @@
+<html>
+<head>
+</head>
+<script type="text/javascript">
+function createtable(){
+        var alvo = document.getElementById('table');
+        var table = document.createElement("TABLE");
+        var linha = document.createElement("TR");
+        var campo = document.createElement("TD");
+        var campo2 = document.createElement("TD");
+        var campo3 = document.createElement("TD");
+        var text1 = document.createElement('INPUT'); 
+        var text2 = document.createElement('INPUT');
+        var botao = document.createElement('INPUT');         
+        
+        text1.setAttribute('type','text'); 
+        text1.setAttribute('name','label[]'); 
+        text1.setAttribute('id','label[]'); 
+        text1.setAttribute('maxlength','10'); 
+        text1.setAttribute('size','10'); 
+        
+        text2.setAttribute('type','text'); 
+        text2.setAttribute('name','valor[]'); 
+        text2.setAttribute('id','valor[]'); 
+        text2.setAttribute('maxlength','10'); 
+        text2.setAttribute('size','5');
+        
+        botao.setAttribute('type','button');
+        botao.setAttribute('name','del'); 
+        botao.setAttribute('id','del'); 
+        botao.value="Excluir Essa Linha!";
+        botao.setAttribute('onclick','deltable()');        
+   
+          var tbody = document.createElement("TBODY");
+          campo.innerHTML = "Campo da tabela ";
+          campo2.innerHTML = "Campo da tabela ";
+          linha.appendChild(campo);
+          campo.appendChild(text1);
+          linha.appendChild(campo2);
+          campo2.appendChild(text2);
+          linha.appendChild(campo3);          
+          campo3.appendChild(botao);
+          tbody.appendChild(linha);
+          table.appendChild(tbody);
+          alvo.appendChild(table);
+}
+
+function deltable(){
+alert("Como Fazer Pra EXCLUIR ISSO??");
+}
+</script>
+<body>
+<form>
+<input type="button" onclick="createtable()" value="Criar"></input>
+</form>
+<div id="table">Tabela:<br/></div>
+</body>
+</html>

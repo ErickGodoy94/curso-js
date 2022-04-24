@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Nacionalidade</title>
+    <style>
+        div#res {
+            font: normal 30px Comic;
+            margin-top: 20px;
+        }
+        input {
+            font: normal 18px Arial;
+            width: 170px;
+        }
+        span#one {
+            color: green;
+        }
+        span#two {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de <span id="one">Naciona</span><span id="two">lidade</span></h1>
+    <input type="text" name="nactxt1" id="nactxt1" placeholder="País de nascimento"/>
+    <input type="text" name="nactxt2" id="nactxt2" placeholder="País onde reside"/>
+    <input type="button" value="Verificar" onclick="verify()"/>
+    <div id="res">
+        <strong>Resultado:</strong>
+    </div>
+    
+    
+    <script>
+        function verify(){
+        var nac1 = document.querySelector('input#nactxt1')
+        var nac2 = document.querySelector('input#nactxt2')
+        var res = document.querySelector('div#res')
+        var nacio1 = String(nac1.value)
+        var nacio2 = String(nac2.value)
+        if (nacio1 == nacio2) {
+            res.innerHTML += `</br>Você é <u><strong>residente</strong></u>`
+        } else {
+            res.innerHTML += `</br>Você é <u><strong>estrangeiro</strong></u>`
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta Aula 6</title>
+    <style>
+        body{
+            font: normal 28pt Arial;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body onload="run()">
+    <script>
+        function run(){
+            const listaElement = document.querySelector('ul')
+        function getNomes(){
+            var nome1 = window.prompt('Digite o nome do 1º funcionario: ')
+            var nome2 = window.prompt('Digite o nome do 2º segundo funcionario: ')
+            var nome3 = window.prompt('Digite o nome do 3º terceio funcionario: ')
+            var nome4 = window.prompt('Digite o nome do 4º quarto funcionario: ')
+            
+            return [
+                nome1, 
+                nome2, 
+                nome3, 
+                nome4
+            ]
+    }
+        var nomes = getNomes()
+        //var nomes2 = getNomes()0
+        //console.log(nomes, nome1s2)0
+        
+            var n1 = Number(window.prompt(`Digite o salario do(a) ${nomes[0]}: `)).toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            var n2 = Number(window.prompt(`Digite o salario do(a) ${nomes[1]}: `)).toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            var n3 = Number(window.prompt(`Digite o salario do(a) ${nomes[3]}: `)).toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            var n4 = Number(window.prompt(`Digite o salario do(a) ${nomes[2]}: `)).toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            const salarios = [n1, n2, n3, n4]
+
+      
+        for (var i = 0; i < nomes.length; i++) {
+            console.log(nomes[i]);
+            listaElement.innerHTML += (`<li>O salario do(a) <b>${nomes[i].toUpperCase()}</b> é: ${salarios[i]}</li>`)
+        }
+        }      
+    </script>
+    <ul></ul>
+</body>
+</html>
