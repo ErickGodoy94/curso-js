@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de convidados</title>
+    <style>
+        body{
+            background-image: url(https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?w=740&t=st=1682727245~exp=1682727845~hmac=59d0086488685124aa72bf69bfa452b63b49c603ba215f12a5daa808acf7933a);
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            max-width: 400px;
+            margin: auto;
+        }
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            color: aliceblue;
+        }
+        h2{
+            text-align: center;
+            color: aliceblue;
+        }
+        input#parent{
+            padding: 20px;
+        }
+        input#press{
+            padding: 10px;
+        }
+        div#res {
+            text-align: center;
+        }
+        p{
+            color: aliceblue;
+        }
+    </style> 
+</head>
+<body>
+    <h1><p>Lista de Convidados</p></h1>
+<h2>Digite seu gral de <br>Parentesco</br></h2> <input type="text" name="parent" id="parent" >
+<input type="button" value="Press" id="press" onclick="dexove()">
+<div id="res">
+
+</div>
+    <script>
+        function dexove() {
+            var gral = document.querySelector('input#parent')
+            var res = document.querySelector('div#res')
+            var parentesAceitos = ["mae", "pai", "irmao", "tio", "primo"]
+            var parenteTemAcesso = parentesAceitos.includes(gral.value.toLowerCase())
+            
+            res.innerHTML = `Analisei e vi que o senhor(a) é ${gral.value} do aniversariante!`
+            res.innerHTML += `Validação de acesso...`
+            
+            if (parenteTemAcesso) {
+                res.innerHTML = `<p>Seja bem vindo, ${gral.value} do aniversariante, aproveite e se for dirigir, não beba!`
+            } else {
+                res.innerHTML += `<p>Tem o telefone do aniversariante ${gral}? Da uma ligadinha, não posso te liberar! <br>=/</br></p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Estrutura while</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 75px;
+        }
+        h3{
+            text-align: center;
+        }
+        input#senhatxt {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            width: 180px;
+            height: 60px;
+            margin: auto;
+            box-shadow: 0px 0px 20px gray;
+            text-align: center;
+        }
+        input#check {
+            position: absolute;
+            top: 140px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            height: 40px;
+            width: 120px;
+            box-sizing: border-box;
+            margin: auto;
+            
+        }
+        div#span {
+            text-align: center;
+        }
+        footer {
+            margin-top: 380px;
+            text-align: left;
+        }
+        p {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Caixa Eletronico</h1>
+        <h3><u>Entre com a sua senha</u></h3> 
+    </header>
+    
+    <main>
+        <input type="number" name="senha" id="senhatxt" placeholder="Digita sua senha aqui.">
+        <input type="button" value="Acessar" id="check" onclick="acessar()">
+        <div id="res">
+            <h2>Aguardando confirmação...</h2>
+            <span></span>
+        </div>
+    </main>
+
+    <footer>
+        Erick Godoy Brito Marinho <a href="https://github.com/ErickGodoy94" target="_blank"></a>
+    </footer>
+    <script>
+        function acessar(){
+            var senha = document.querySelector('input#senhatxt')
+            var res = document.querySelector('div>span')
+            var pass = Number(senha.value)
+
+            if(pass == 123456789){
+                res.innerHTML = '<p><strong>Senha correta </br>digite o valor a ser sacado.</strong><p>'
+            } else {
+                res.innerHTML = '<p><strong>Senha incorreta </br>tente novamente.</strong></p>'
+            }
+            
+       }
+    </script>
+</body>
+</html>
